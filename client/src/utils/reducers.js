@@ -21,13 +21,17 @@ const initialState = {
   currentCategory: "",
 };
 
+
+//actions in case
 export const reducer = (state = initialState, action) => {
   switch (action.type) {
+
     case UPDATE_PRODUCTS:
       return {
         ...state,
         products: [...action.products],
       };
+
 
     case ADD_TO_CART:
       return {
@@ -36,11 +40,13 @@ export const reducer = (state = initialState, action) => {
         cart: [...state.cart, action.product],
       };
 
+
     case ADD_MULTIPLE_TO_CART:
       return {
         ...state,
         cart: [...state.cart, ...action.products],
       };
+
 
     case UPDATE_CART_QUANTITY:
       return {
@@ -54,6 +60,7 @@ export const reducer = (state = initialState, action) => {
         }),
       };
 
+
     case REMOVE_FROM_CART:
       let newState = state.cart.filter((product) => {
         return product._id !== action._id;
@@ -65,6 +72,7 @@ export const reducer = (state = initialState, action) => {
         cart: newState,
       };
 
+
     case CLEAR_CART:
       return {
         ...state,
@@ -72,17 +80,20 @@ export const reducer = (state = initialState, action) => {
         cart: [],
       };
 
+
     case TOGGLE_CART:
       return {
         ...state,
         cartOpen: !state.cartOpen,
       };
 
+
     case UPDATE_CATEGORIES:
       return {
         ...state,
         categories: [...action.categories],
       };
+
 
     case UPDATE_CURRENT_CATEGORY:
       return {
