@@ -4,6 +4,8 @@ const { Schema } = mongoose;
 const bcrypt = require('bcrypt');
 const Order = require('./Order');
 
+
+//user model
 const userSchema = new Schema({
   firstName: {
     type: String,
@@ -28,7 +30,7 @@ const userSchema = new Schema({
   orders: [Order.schema]
 });
 
-// set up pre-save middleware to create password
+//create password hash
 userSchema.pre('save', async function(next) {
   if (this.isNew || this.isModified('password')) {
     const saltRounds = 10;

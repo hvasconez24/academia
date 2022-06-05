@@ -144,6 +144,7 @@ input:focus {
   max-width: 1200px;
   margin-left: auto;
   margin-right: auto;
+  padding-bottom: 8rem !important;
 }
 
 .flex-row {
@@ -222,7 +223,9 @@ footer {
   text-align: center;
   margin-top: 3rem;
   padding: 2rem;
+
   /* Posicionar abajo */
+  position: fixed;
   bottom: 0;
   /* Ocupar todo el ancho disponible */
   width: 100%;
