@@ -46,8 +46,9 @@ function CategoryMenu() {
   };
 
   return (
-    <div>
-      <h2>Choose a Category:</h2>
+    <div className="padding">
+      <h2 className="bold">Choose a Category:</h2>
+      <br></br>
       {categories.map((item) => (
         <button
           key={item._id}

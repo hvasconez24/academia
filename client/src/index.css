@@ -114,6 +114,7 @@ button[disabled] {
 
 img {
   max-width: 100%;
+  border-radius: 3%;
 }
 
 span[role="img"] {
@@ -154,6 +155,10 @@ input:focus {
   justify-content: space-between;
 }
 
+.bold{
+  font-weight: bold;
+}
+
 .flex-end {
   justify-content: flex-end;
 }
@@ -176,6 +181,11 @@ input:focus {
 .my-2 {
   margin-top: var(--spacing-two);
   margin-bottom: var(--spacing-two);
+}
+
+.padding{
+  padding-top: 2rem;
+  padding-bottom: 1rem;
 }
 
 .px-1 {
@@ -201,6 +211,7 @@ input:focus {
 .card {
   width: 25%;
   text-align: center;
+  border: groove
 }
 
 .error-text {
